@@ -1,0 +1,110 @@
+﻿<!
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>jQuery</title>
+    <link href="stylesheet.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--LA 7712-->
+    <script>
+        var counter = 0;
+        $(document).ready(function () {
+            $(".img").click(function () {
+                counter++;
+                if (counter % 2 === 1) {
+                    $(this).attr("src", "gimp-logo_blau.png");
+                } else {
+                    $(this).attr("src", "gimp-logo_transparent.png");
+                }
+            });
+        });
+    </script>
+    <style>
+        main {
+            color: #FF9F00;
+            background-color: #223344;
+        }
+
+        .img:hover{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!--HEADER-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+            <a class="navbar-brand" href="#">jQuery</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Start <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LA7711.html">LA-7711</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LA7712.html">LA-7712</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LA7713.html">LA-7713</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LA7714.html">LA-7714</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LA7715.html">LA-7715</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LA7716.html">LA-7716</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LA7717.html">LA-7717</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testpage.html">Test</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--END HEADER-->
+    <main>
+        <h1>LA-7751</h1>
+
+        <h3>Aufgabe 1</h3>
+        <img class="img" src="gimp-logo_transparent.png" width="500"/>
+
+        <h3>Aufgabe 3</h3>
+        <a href="Animation.html">Animation</a>
+    </main>
+    <!-- FOOTER -->
+    <footer class="container badge-light">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 1998-2018 Christian, Inc.</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+</body>
+</html>

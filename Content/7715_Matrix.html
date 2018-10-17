@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>You should have taken the red Pill</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var interval = null;
+        var length = $(window).length();
+        var positions = [];
+        var amoutOfInstances = 0;
+        var instances = [];
+        $(document).ready(function () {
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var distance = 0;
+            var heightBody = $(window).height();
+            fillArray();
+            fall();
+            console.log(heightBody);
+            interval = setInterval(verschiebe, 100);
+        });
+
+        function fillArray() {
+            for (i = 0; i < length / 5; i = i+5) {
+                positions += i;
+            }
+        }
+
+        function createRow() {
+            for (i = 0; i < positions.length; i++) {
+                var ran = Math.floor(Math.random() * 8);
+                if (ran != 1) {
+                    createInstance(i);
+                }
+            }
+        }
+
+        function createInstance(distanceLeft) {
+            var down = {
+                text: possible.charAt(Math.floor(Math.random() * possible.length)),
+                distanceLeft: this.distanceLeft,
+            }
+            instances += down;
+        }
+
+        //TODO: Split the functions
+        function fall() {
+
+            var breakI = false;
+
+            $("#falling").css("margin-left", Math.random() * innerWidth);
+            var verschiebe = function () {
+                $("#falling").css("margin-top", distance);
+                distance++;
+                if (distance >= heightBody) {
+                    breakI = true;
+                    return;
+                }
+            };
+            if (breakI == false) {
+                setInterval(verschiebe, 10, 100);
+            } else {
+                return;
+            }
+        };
+    </script>
+    <style>
+        #falling {
+            position: relative;
+            display: block;
+            color: #008F11;
+            margin-left: 500px;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="falling">
+        <p></p>
+    </div>
+</body>
+</html>

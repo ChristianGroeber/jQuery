@@ -1,0 +1,30 @@
+﻿body {
+}
+
+tbody{
+    font-weight:lighter;
+}
+
+main{
+    padding-bottom:5em;
+    padding-top:4em;
+}
+
+footer{
+    position:fixed;
+    width:100%;
+    bottom:0;
+    margin-top: 5em;
+}
+
+tr.colored {
+    background-color: chartreuse;
+}
+
+tr.fancy {
+    background-color: #1e90ff;
+}
+
+#tabbed{
+    margin-left:3em;
+}
